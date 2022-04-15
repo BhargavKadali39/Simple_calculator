@@ -1,0 +1,75 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: #24d6c4;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interface{
+    height: 600px;
+    width: 400px;
+}
+.displays{
+    height: 170px;
+    width: 370px;
+    word-wrap: break-word;
+    border-radius: 15px 15px 0 0 ;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 15px solid rgba(255, 127, 58, 0);
+    background-color: #12A0A5;
+    color: antiquewhite;
+}
+
+.displays::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+.displays::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+input{
+    background-color: rgb(231, 230, 209);
+    border-radius: 5px;
+}
+#sym{
+    font-size: 20px;
+}
+
+.options{
+    height: 370px;
+    width: 370px;
+    border: 15px solid rgba(255, 58, 124, 0);
+    border-radius: 0 0 15px 15px ;
+    
+    background-color: #1D585D;
+    border-top: 7px solid black;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    /* order: 5; */
+    gap: 12px;
+}
+
+input{
+    height: 65px;
+    width: 65px;
+}
+
+/* 
+for ordering elements
+    order: 5;
+
+
+
+*/
