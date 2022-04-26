@@ -11,29 +11,32 @@
     <div class="container">
         <div class="block">
             <div class="interface">
-                <div class="displays" id="displays"></div>
+                <div>
+                    <input class="displays" id="displays" type="placeholder">
+                </div>
                 <div class="options">
-                    <input type="button" value="C" onclick="clr()"/>
-                    <input type="button" value="BS" onclick="backsp()"/>
-                    <input type="button" value="%" onclick="disps('%')"/>
-                    <input type="button" id="sym" value="/" onclick="disps('/')"/>
+                    <input type="button" value="C" class="pop" onclick="clr()"/>
+                    <input type="button" value="BS" class="pop" onclick="backsp()"/>
+                    <input type="button" value="%" class="pop" onclick="disps('%')"/>
+                    <input type="button" class="sym pop" value="/" onclick="disps('/')"/>
                     <input type="button" value="7" onclick="disps(7)"/>
                     <input type="button" value="8" onclick="disps(8)"/>
                     <input type="button" value="9" onclick="disps(9)"/>
-                    <input type="button" value="X" onclick="disps('*')"/>
+                    <input type="button" class="pop" value="X" onclick="disps('*')"/>
                     <input type="button" value="4" onclick="disps(4)"/>
                     <input type="button" value="5" onclick="disps(5)"/>
                     <input type="button" value="6" onclick="disps(6)"/>
-                    <input type="button" id="sym" value="-" onclick="disps('-')"/>
+                    <input type="button" class="sym pop" value="-" onclick="disps('-')"/>
                     <input type="button" value="1" onclick="disps(1)"/>
                     <input type="button" value="2" onclick="disps(2)"/>
                     <input type="button" value="3" onclick="disps(3)"/>
-                    <input type="button" id="sym" value="+" onclick="disps('+')"/>
+                    <input type="button" class="sym pop" value="+" onclick="disps('+')"/>
                     <input type="button" value="0" onclick="disps(0)"/>
-                    <input type="button" style="font-size: 30px;" value="." onclick="disps('.')"/>
-                    <input type="button" value="History" onclick="histr()"/>
-                    <input type="button" id="sym" value="=" onclick="evalu()"/>
+                    <input type="button" class="pop" style="font-size: 30px;" value="." onclick="disps('.')"/>
+                    <input type="button" value="History" class="pop" onclick="histr()"/>
+                    <input type="button" id="myBtn" class="sym pop" value="=" onclick="evalu()"/>
                 </div>
+                <!-- <div class="submen"></div> -->
             </div>
         </div>
     </div>
