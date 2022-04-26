@@ -1,39 +1,50 @@
 let calcs = '';
 let curnt='';
-let disp = document.getElementById('displays'); // innerHTML 
+let disp = document.getElementById('displays'); 
 
 function disps(a){
     curnt=curnt+""+a;
     calcs=calcs+a;
-    disp.innerHTML='<h2>'+curnt+'</h2>';
-    console.log(curnt)
+    disp.value=curnt;
+    // console.log(curnt)
 }
 
 function clr(){
-    curnt='0';
+    curnt='';
     disps('');
 }
 
 function histr(){
-    disp.innerHTML='<h2>'+calcs+'</h2>';
+    curnt=''
+    disp.value=calcs;
 }
-
 
 function evalu(){
     try {
-    let aa=disp.innerText;
-    let an = eval(aa);
-    curnt=an;
-    calcs=calcs+' = '+an+'<br>';
-    disp.innerHTML='<h2>'+an+'</h2>';
-}
-catch(err) {
-    disp.innerHTML='<h2>Syntax Error</h2>';
-}
+        let aa=disp.value;
+        let an = eval(aa);
+        curnt=an;
+        calcs=calcs+' = '+an+"\n";
+        disp.value=an;
+    }
+    catch(err) {
+        disp.value='Syntax Error';
+    }
 }
 
 function backsp(){
-    let aa=disp.innerText;
-    let bs = (aa/10)| 0;
-    disp.innerHTML='<h2>'+bs+'</h2>';
+    let aa=disp.value;
+    let bs='';
+    if (aa=='Syntax Error') {}
+    else {
+        bs = (aa/10)| 0;
+    }
+    disp.value=bs;
 }
+
+disp.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
